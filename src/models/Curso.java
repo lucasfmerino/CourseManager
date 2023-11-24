@@ -3,7 +3,9 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Curso
@@ -14,6 +16,7 @@ public class Curso {
     private String instrutor;
     private List<Aula> aulas =  new ArrayList<Aula>();
     // private List<Aula> aulas =  new LinkedList<Aula>();
+    private Set<Aluno> alunos = new HashSet<>();
 
 
     public Curso(String nome, String instrutor) {
@@ -46,6 +49,14 @@ public class Curso {
         // return tempoTotal;
 
         return this.aulas.stream().mapToInt(Aula::getTempo).sum();
+    }
+
+    public void matricula(Aluno aluno) {
+        this.alunos.add(aluno);
+    }
+
+    public Set<Aluno> getAlunos() {
+        return Collections.unmodifiableSet(alunos);
     }
 
     @Override
