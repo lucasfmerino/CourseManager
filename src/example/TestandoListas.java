@@ -20,14 +20,14 @@ public class TestandoListas {
 
         System.out.println(aulas);
 
-        for(String aula : aulas) {
+        for (String aula : aulas) {
             System.out.println("Aula: " + aula);
         }
 
         String primeiraAula = aulas.get(0);
         System.out.println("A primeira aula é " + primeiraAula);
 
-        for(int i = 0; i < aulas.size(); i++) {
+        for (int i = 0; i < aulas.size(); i++) {
             System.out.println("Aula: " + aulas.get(i));
         }
 
