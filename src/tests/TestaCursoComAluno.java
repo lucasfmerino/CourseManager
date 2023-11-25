@@ -1,5 +1,8 @@
 package tests;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import models.Aluno;
 import models.Aula;
 import models.Curso;
@@ -24,5 +27,29 @@ public class TestaCursoComAluno {
         javaColecoes.getAlunos().forEach(a -> {
             System.out.println(a);
         });
+
+        System.out.println(String.format("O aluno %2$s ou  %1$s está matriculado?", a1.getNome(), a2.getNome()));
+
+        if (javaColecoes.estaMatriculado(a1) & javaColecoes.estaMatriculado(a2)) {
+            System.out.println("Sim.");
+        } else {
+            System.out.println("Não");
+        }
+
+        Aluno a4 = new Aluno("Márcia", 1234);
+
+        System.out.println(a1.equals(a4));
+        System.out.println(javaColecoes.estaMatriculado(a4));
+        System.out.println(javaColecoes.estaMatriculado(a1));
+
+        // ------------
+
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+        while (iterador.hasNext()) {
+            Aluno proximo = iterador.next();
+            System.out.println(proximo);
+        }
+
     }
 }

@@ -12,7 +12,7 @@ import models.Aula;
 public class TestaListaDeAula {
 
     public static void main(String[] args) {
-        
+
         Aula a1 = new Aula("Revisando as ArrayLists", 21);
         Aula a2 = new Aula("Lista  de Objetos", 15);
         Aula a3 = new Aula("Relacionamento de listas e objetos", 14);

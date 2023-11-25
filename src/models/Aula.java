@@ -1,6 +1,6 @@
 package models;
 
-public class Aula implements Comparable<Aula>{
+public class Aula implements Comparable<Aula> {
 
     private String titulo;
     private int tempo;
